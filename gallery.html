@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Equipo</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="path/to/your/css/style.css"> <!-- Asegúrate de enlazar tu CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #343a40;
+        }
+        p {
+            text-align: center;
+            color: #6c757d;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery-item {
+            margin: 15px;
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 180px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+        }
+        .gallery-item h5 {
+            margin: 10px 0 5px;
+            color: #495057;
+        }
+        .gallery-item h6 {
+            margin: 0 0 10px;
+            color: #868e96;
+        }
+        .btn-back {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn-back:hover {
+            background-color: #0056b3;
+        }
+        .info-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 40px;
+            box-sizing: border-box;
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        .info-modal h4 {
+            margin-top: 0;
+            color: #ffc107;
+        }
+        .info-modal h6 {
+            color: #f8f9fa;
+        }
+        .close-modal {
+            cursor: pointer;
+            color: white;
+            /*background-color: #28a745; Color de fondo verde */
+            background-color: #a10f0f;
+            border: none;
+            border-radius: 5px; /* Esquinas redondeadas */
+            padding: 10px 20px; /* Espaciado interno */
+            font-size: 16px; /* Tamaño de fuente */
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+        }
+
+        .close-modal:hover {
+            /* background-color: #218838; Color de fondo más oscuro al pasar el ratón */#640e0e
+            background-color: #640e0e;
+            transform: translateY(-2px); /* Efecto de elevación al pasar el ratón */
+        }
+        .modal-content {
+            background-color: #343a40;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        .info-text {
+    text-align: justify; /* Alinear el texto a la izquierda */
+    margin-top: 10px; /* Espaciado entre el título y el texto */
+    font-size: 14px; /* Tamaño de fuente */
+    line-height: 1.5; /* Altura de línea para mejor legibilidad */
+    color: #fff; /* Color del texto */
+    /* Otros estilos que desees aplicar */
+}
+    </style>
+</head>
+<body>
+
+    <h2>Galería de Nuestro Equipo</h2>
+    <p>A continuación, podrás ver a todos los miembros de nuestro equipo altamente capacitados.</p>
+
+    <div class="gallery">
+        <!-- Aquí se agregan los guardias -->
+        <div class="gallery-item" data-name="Jose Suarez" data-role="Presidente" data-info="Jose Suarez es un profesional de la seguridad con más de 5 años de experiencia en el sector, donde ha demostrado ser un líder excepcional y un experto en la implementación de estrategias de seguridad efectivas. A lo largo de su carrera, ha trabajado en diversas industrias, incluyendo la seguridad privada, eventos masivos y la protección de instalaciones críticas. Su enfoque proactivo y su capacidad para anticipar y mitigar riesgos han sido fundamentales para garantizar la seguridad de las operaciones en las que ha estado involucrado. 
+
+        Jose es conocido por su habilidad para liderar y motivar equipos, fomentando un ambiente de trabajo colaborativo y eficiente. Ha desarrollado e implementado protocolos de seguridad que no solo cumplen con las normativas vigentes, sino que también han demostrado ser efectivos en la reducción de incidentes en un 30%. Su experiencia incluye la capacitación de personal en técnicas de prevención y respuesta ante emergencias, así como la gestión de situaciones de crisis con calma y eficacia.
+
+        Además, Jose se mantiene actualizado en las últimas tendencias y tecnologías en el ámbito de la seguridad, lo que le permite integrar soluciones innovadoras que mejoran la vigilancia y la protección de los activos. Su compromiso con la excelencia y su ética de trabajo lo han convertido en un referente en su campo, ganándose el respeto y la confianza de sus colegas y superiores. En su tiempo libre, Jose participa en seminarios y talleres relacionados con la seguridad, lo que demuestra su dedicación a la mejora continua y su deseo de contribuir al desarrollo de la industria.">
+            <img src="images/t1.jpg" alt="Jose Suarez">
+            <h5>Jose Suarez</h5>
+            <h6>Presidenter</h6>
+        </div>
+        <div class="gallery-item" data-name="Segundo Escalona" data-role="Tesorero" data-info="Segundo Escalona es el Tesorero de la empresa, con más de 8 años de experiencia en la gestión financiera y contable. Su papel es fundamental para asegurar la salud financiera de la organización, supervisando la planificación y el control del presupuesto, así como la gestión de los recursos económicos. Segundo es conocido por su meticulosidad y su capacidad para analizar datos financieros, lo que le permite tomar decisiones informadas que benefician a la empresa.
+
+        A lo largo de su carrera, ha implementado sistemas de control financiero que han optimizado la eficiencia en la gestión de los recursos, logrando una reducción de costos del 20% en el último año. Su enfoque analítico y su atención al detalle son clave para identificar oportunidades de mejora y garantizar la transparencia en todas las operaciones financieras.
+
+        Además, Segundo trabaja en estrecha colaboración con otros departamentos para asegurar que las decisiones financieras estén alineadas con los objetivos estratégicos de la empresa. Su habilidad para comunicar información compleja de manera clara y efectiva ha sido fundamental para fomentar la confianza entre los miembros del equipo y la alta dirección.
+
+        Fuera del trabajo, Segundo se dedica a la formación continua en finanzas y contabilidad, participando en cursos y seminarios que le permiten mantenerse actualizado sobre las mejores prácticas y tendencias del sector. Su compromiso con la excelencia y su ética profesional lo han convertido en un pilar fundamental dentro de la organización.">
+            <img src="images/t2.jpg" alt="Segundo Escalona">
+            <h5>Segundo Escalona</h5>
+            <h6>Tesorero</h6>
+        </div>
+        <div class="gallery-item" data-name="Hildo Cabello" data-role="Administrativo" data-info="Hildo Cabello es un administrativo con más de 6 años de experiencia en la gestión de operaciones y soporte administrativo. Su papel es crucial para garantizar que las operaciones diarias de la empresa se realicen de manera eficiente y efectiva, facilitando la comunicación entre los diferentes departamentos y asegurando que los procesos se lleven a cabo sin contratiempos.
+
+        A lo largo de su carrera, Hildo ha demostrado ser un experto en la organización y gestión de documentos, así como en la implementación de sistemas que mejoran la eficiencia operativa. Su atención al detalle y su capacidad para manejar múltiples tareas simultáneamente le han permitido optimizar los flujos de trabajo, reduciendo el tiempo de respuesta en un 25% en los últimos dos años.
+
+        Además, Hildo es conocido por su habilidad para resolver problemas de manera rápida y efectiva. Su enfoque proactivo le permite anticipar las necesidades de su equipo y actuar en consecuencia, lo que ha sido fundamental para mantener un ambiente de trabajo armonioso y productivo. Su capacidad para comunicarse de manera clara y efectiva ha sido clave para fomentar la colaboración entre los miembros del equipo y garantizar que todos estén alineados con los objetivos de la empresa.
+
+        Fuera del trabajo, Hildo se dedica a la formación continua en gestión administrativa y desarrollo personal, participando en talleres y cursos que le permiten mantenerse actualizado sobre las mejores prácticas en su campo. Su compromiso con la mejora continua y su ética de trabajo lo han convertido en un miembro valioso del equipo, ganándose el respeto y la confianza de sus colegas y superiores.">
+            <img src="images/t3.jpg" alt="Hildo Cabello">
+            <h5>Hildo Cabello</h5>
+            <h6>Administrativo</h6>
+        </div>
+        <div class="gallery-item" data-name="Brayan Suarez" data-role="Supervisor" data-info="Brayan Suarez es un centralista con más de 4 años de experiencia en la gestión de comunicaciones y coordinación de operaciones. Su enfoque proactivo y su capacidad para trabajar bajo presión lo han convertido en un recurso invaluable para el equipo, asegurando que todas las llamadas y solicitudes se manejen de manera eficiente y efectiva.
+
+        A lo largo de su carrera, Brayan ha demostrado ser un experto en el uso de sistemas de gestión de llamadas y software de comunicación, lo que le permite optimizar los tiempos de respuesta y mejorar la satisfacción del cliente. Su habilidad para priorizar tareas y su atención al detalle son fundamentales para garantizar que las operaciones diarias se desarrollen sin inconvenientes.
+
+        Brayan es conocido por su excelente capacidad de comunicación, lo que le permite interactuar de manera efectiva con clientes y colegas. Su enfoque amigable y profesional ha sido clave para construir relaciones sólidas y fomentar un ambiente de trabajo colaborativo. Además, su capacidad para resolver problemas de manera rápida y efectiva ha sido fundamental para manejar situaciones de emergencia y garantizar la continuidad del servicio.
+
+        Fuera del trabajo, Brayan se dedica a la formación continua en gestión de operaciones y atención al cliente, participando en cursos y talleres que le permiten mantenerse actualizado sobre las mejores prácticas en su campo. Su compromiso con la excelencia y su ética de trabajo lo han convertido en un miembro respetado y valorado dentro de la organización.">
+            <img src="images/t1.jpg" alt="Brayan Suarez">
+            <h5>Brayan Suarez</h5>
+            <h6>Centralista</h6>
+        </div>
+        <div class="gallery-item" data-name="Carlos Pérez" data-role="Vigilante" data-info="Frank es un líder natural en su equipo.">
+            <img src="images/vigilantes.png" alt="Frank Riera">
+            <h5>Frank Riera</h5>
+            <h6>Vigilante</h6>
+        </div>
+        <div class="gallery-item" data-name="Ana López" data-role="Vigilante" data-info="Ana es reconocida por su atención al detalle.">
+            <img src="images/vigilantes.png" alt="Ana López">
+            <h5>Ana López</h5>
+            <h6>Vigilante</h6>
+        </div>
+        <div class="gallery-item" data-name="Alexander Freitez" data-role="Vigilante" data-info="Alexander tiene un gran conocimiento en seguridad física.">
+            <img src="images/vigilantes.png" alt="Alexander Freitez">
+            <h5>Alexander Freitez</h5>
+            <h6>Vigilante</h6>
+        </div>
+        <div class="gallery-item" data-name="Sofía Ramírez" data-role="Vigilante" data-info="Sofía es experta en prevención de riesgos.">
+            <img src="images/vigilantes.png" alt="Sofía Ramírez">
+            <h5>Sofía Ramírez</h5>
+            <h6>Vigilante</h6>
+        </div>
+        <div class="gallery-item" data-name="Fortulio Martinez" data-role="Vigilante" data-info="Fortulio tiene un enfoque centrado en el cliente.">
+            <img src="images/vigilantes.png" alt="Fortulio Martinez">
+            <h5>Fortulio Martinez</h5>
+            <h6>Vigilante</h6>
+        </div>
+        <div class="gallery-item" data-name="Roberto Quintero" data-role="Vigilante" data-info="Roberto es conocido por su habilidad para resolver problemas.">
+            <img src="images/vigilantes.png" alt="Roberto Quintero">
+            <h5>Roberto Quintero</h5>
+            <h6>Vigilante</h6>
+        </div>
+        <div class="gallery-item" data-name="Anibal Mendoza" data-role="Vigilante" data-info="Anibal es conocido por su habilidad para resolver problemas.">
+            <img src="images/vigilantes.png" alt="Anibal Mendoza">
+            <h5>Anibal Mendoza</h5>
+            <h6>Vigilante</h6>
+        </div>
+        <div class="gallery-item" data-name="Rito Escalona" data-role="Vigilante" data-info="Rito es conocido por su habilidad para resolver problemas.">
+            <img src="images/vigilantes.png" alt="Rito Escalona">
+            <h5>Rito Escalona</h5>
+            <h6>Vigilante</h6>
+        </div>
+    </div>
+
+    <a href="index.html#equipo" class="btn-back">Volver a la sección de guardias</a>
+
+    <!-- Modal para mostrar información del vigilante -->
+    <div class="info-modal" id="infoModal">
+        <span class="close-modal" id="closeModal">&times;</span>
+        <div class="modal-content">
+            <h4 id="modalName"></h4>
+            <h6 id="modalRole"></h6>
+            <p id="modalInfo" class="info-text"></p>
+        </div>
+    </div>
+
+    <script>
+    // Obtener todos los elementos de la galería
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const modal = document.getElementById('infoModal');
+    const modalName = document.getElementById('modalName');
+    const modalRole = document.getElementById('modalRole');
+    const modalInfo = document.getElementById('modalInfo');
+    const closeModal = document.getElementById('closeModal');
+
+    // Función para mostrar el modal
+    function showModal(item) {
+        modalName.textContent = item.getAttribute('data-name');
+        modalRole.textContent = item.getAttribute('data-role');
+        
+        // Obtener el contenido de data-info y reemplazar saltos de línea con <br>
+        const info = item.getAttribute('data-info').replace(/\n/g, '<br>');
+        modalInfo.innerHTML = info; // Usar innerHTML para permitir etiquetas HTML
+        modal.style.display = 'block';
+    }
+
+    // Añadir evento de clic a cada elemento de la galería
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            showModal(item);
+        });
+    });
+
+    // Cerrar el modal al hacer clic en la 'X'
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Cerrar el modal si se hace clic fuera del contenido del modal
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+    </script>
+
+</body>
+</html>
